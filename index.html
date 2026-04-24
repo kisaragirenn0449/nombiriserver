@@ -1,42 +1,58 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>のんびりサーバー公式ホームページ</title>
-  <link rel="stylesheet" href="stylet.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="のんびりサーバー公式ホームページ">
+    <meta property="og:description" content="このサイトはのんびりサーバーの公式webサイトです。">
+    <meta property="og:title" content="のんびりサーバー公式ホームページ">
+    <meta property="og:description" content="このサイトはのんびりサーバーの公式webサイトです。">
+    <meta property="og:image" content="https://test/image.png">
+    <meta property="og:url" content="https://test.com/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>のんびりサーバーホームページ</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<script>
+function toggleMenu() {
+    const menu = document.getElementById("navMenu");
+    menu.classList.toggle("active");
+}
+</script>
 
-  <!-- ヘッダー -->
-  <header class="header">
-    <div class="container">
-      <h1 class="logo">NonbiriServer</h1>
-      <nav>
-        <ul class="nav">
-          <li><a href="#">ホーム</a></li>
-          <li><a href="#">サーバー一覧</a></li>
-          <li><a href="#">お問い合わせ</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
 
-  <!-- ヒーロー -->
-  <section class="hero">
-    <div class="container">
-      <h2>みんなでのんびりmimecraft</h2>
-      <p>誰でもはいれるJava版&統合版対応！</p>
-      <a href="https://t.co/qo9EWOXY0K" class="btn">Discordに参加する</a>
-    </div>
-  </section>
+<header class="hero-header">
+    <div class="overlay">
+        <h1>のんびりサーバーホームページ</h1>
 
-  <!-- フッター -->
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2026 TatamiServer</p>
+        <!-- ▼ ハンバーガーメニュー ▼ -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav id="navMenu">
+            <a href="index.html">ホーム</a>
+            <a href="contents.html">のんさばとは</a>
+            <a href="staff.html">運営の紹介</a>
+            <a href=""></a>
+         </nav>
     </div>
-  </footer>
+</header>
+
+
+<main class="">
+    <iframe src="https://discord.com/widget?id=1409113373324345399&theme=dark" width="1000" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+    <p></p>
+</main>
+
+
+<footer>
+    <p>©2026-のんびりサーバー</p>
+</footer>
 
 </body>
 </html>
