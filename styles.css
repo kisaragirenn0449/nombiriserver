@@ -155,6 +155,44 @@ nav a:hover {
     border-radius: 3px;
 }
 
+/*アンダーバー*/
+.nav-link {
+    position: relative;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: rgba(0, 255, 191, 1);
+
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+    transform-origin: center;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+.content-box {
+    border: 2px solid #00ffbf;
+    padding: 20px;
+    margin: 20px auto;    
+    max-width: 800px;   
+    border-radius: 8px;
+    background-color: #121212; 
+    line-height: 1.6;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+
 
 /* ▼ スマホ表示時（ここからが追加＆最終形） ▼ */
 @media (max-width: 768px) {
