@@ -5,14 +5,17 @@
 }
 
 body {
-    font-family: sans-serif;
-    background: #474747;
+    font-family: "Yu Mincho",
+    "Hiragino Mincho ProN",
+    "MS PMincho",
+    serif;
+    background: #bfbfbf;
 }
 
 .hero-header {
     width: 100%;
     height: 250px;
-    background-image: url("image.png");
+    background-image: url("rogo.png");
     background-size: cover;
     background-position: center;
     position: relative;
@@ -34,7 +37,7 @@ body {
 
 .hero-header h1 {
     color: white;
-    font-size: 2rem;
+    font-size: 3rem;
     margin-bottom: 15px;
 }
 
@@ -47,7 +50,7 @@ main {
 .profile {
     padding: 50px 20px;
     text-align: center;
-    background: #121212;
+    background: #bbbbbb;
     color: white;
 }
 
@@ -66,7 +69,7 @@ main {
 
 /* カード */
 .profile-card {
-    background: #1e1e1e;
+    background: #757575;
     padding: 20px;
     border-radius: 15px;
     width: 220px;
@@ -78,7 +81,7 @@ main {
 /* ホバーで光る */
 .profile-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 25px rgba(0, 255, 191, 0.5);
+    box-shadow: 0 10px 25px #8eff86
 }
 
 /* アイコン */
@@ -97,7 +100,7 @@ main {
 /* 役職 */
 .role {
     font-size: 14px;
-    color: #00bfff;
+    color: #8eff86;
     margin-bottom: 10px;
 }
 
@@ -107,19 +110,6 @@ footer {
     padding: 15px;
     margin-top: 40px;
 }
-
-@media screen and (max-width: 600px) {
-    .hero-header {
-        height: 180px;
-    }
-
-    .hero-header h1 {
-        font-size: 1.5rem;
-    }
-}
-
-
-
 
 /* ▼ PCメニュー（通常の横並び） ▼ */
 nav {
@@ -169,7 +159,7 @@ nav a:hover {
     left: 0;
     width: 100%;
     height: 5px;
-    background-color: rgba(0, 255, 191, 1);
+    background-color: #8eff86;
 
     transform: scaleX(0);
     transition: transform 0.5s ease;
@@ -181,23 +171,64 @@ nav a:hover {
 }
 
 .content-box {
-    border: 2px solid #00ffbf;
     padding: 20px;
     margin: 20px auto;    
     max-width: 800px;   
     border-radius: 8px;
-    background-color: #121212; 
     line-height: 1.6;
     font-size: 20px;
-    color: #ffffff;
+    color: #000000;
 }
 
+.content-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
 
+  padding: 80px 10%;
+}
 
-/* ▼ スマホ表示時（ここからが追加＆最終形） ▼ */
+/* reverseクラスが付いたら左右反転 */
+.content-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.content-section img {
+  width: 45%;
+  border-radius: 5px;
+  object-fit: cover;
+
+  box-shadow: 0 0 25px rgba(0,0,0,0.5);
+}
+
+.text-box {
+  width: 45%;
+}
+
+.text-box h2 {
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+.text-box p {
+  font-size: 24px;
+  line-height: 1.8;
+  color: #383838;
+}
+
+.text-box a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.text-box a:visited {
+  color: rgb(0, 0, 0);
+}
+
+/* スマホ対応 */
 @media (max-width: 768px) {
 
-    /* ハンバーガーを右上へ */
     .hamburger {
         display: flex;
         position: absolute;
@@ -234,15 +265,36 @@ nav a:hover {
         border-bottom: none;
     }
 
-    /* 開いたとき */
     nav.active {
         max-height: 1000px;
     }
-}
 
-@media (max-width: 768px) {
+  .content-section,
+  .content-section.reverse {
+    flex-direction: column;
+  }
+
+  .content-section img,
+  .text-box {
+    width: 100%;
+  }
+
+  .text-box h2 {
+    font-size: 32px;
+  }
+
     .hero-header h1 {
         font-size: 2.4rem;  
         margin-top: 40px;    
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .hero-header {
+        height: 180px;
+    }
+
+    .hero-header h1 {
+        font-size: 1.5rem;
     }
 }
